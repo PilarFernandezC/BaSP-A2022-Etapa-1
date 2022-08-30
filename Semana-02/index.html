@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trackgenix</title>
+        <title>trackgenix</title>
     </head>
     <body>
         <header>
@@ -12,25 +12,23 @@
             <input type="text" name="search">
             <button>Know More</button>
         </header>
-        <section>
-            <h3>Menu</h3>
-                <nav>
-                    <a href="#main">Home</a>
-                    <a href="">SignUp</a>
-                    <a href="">Login</a>
-                </nav>
-            <h3>Contact</h3>
-                <ul>
-                    <img src="assets/img/email-icon.png" alt="email">
-                    <li >trackgenix@gmail.com</li>
-                    <img src="assets/img/phone-icon.jpg" alt="phone">
-                    <li>(+54) 4545-9999</li>
-                    <img src="assets/img/house-icon.png" alt="house">
-                    <li>1234 Somewhere Road #8254 Nashville</li>
-                </ul>
-        </section>    
+        <aside>
+            <h2>Menu</h2>
+            <nav>
+                <a href="#main">Home</a>
+                <a href="">SignUp</a>
+                <a href="">Login</a>
+            </nav>
+            <h2>Contact</h2>  
+            <img src="assets/img/email-icon.png" alt="email">
+            <p>trackgenix@gmail.com</p>
+            <img src="assets/img/phone-icon.jpg" alt="phone">
+            <p>(+54) 4545-9999</p>
+            <img src="assets/img/house-icon.png" alt="house">
+            <p>1234 Somewhere Road #8254 Nashville</p>    
+        </aside>    
         <main>
-            <h1> TRACKGENIX </h1>
+            <h1> trackgenix </h1>
             <h3>Time control that simplifies your business</h3>
             <p>The time control software to manage your employees time in the easiest, fastest and most intuitive way</p>
             <img src="assets/img/main-img.jpg" alt="main-img">
@@ -79,39 +77,50 @@
                     <textarea name="Message" placeholder="Message"></textarea>
                 </div>
                 <div>    
-                    <button>Cancel</button>
-                    <button>Send</button>
+                    <input type="submit" name="send" value="Send">
+                    <input type="submit" name="cancel" value="Cancel">
                 </div>    
             </form>
         </section>
         <section>
             <h2>Our history</h2>
             <img src="assets/img/our-history.jpg" alt="business">
-            <p> Since 2012, we´ve helped countless companies across the globe build aplications that empower growth, leave a
-                lasting impression and transform their user experience. 
-            </p>
-            <p>
-                GigaTech was created in 2012 by a trio of colleagues who met through a coding bootcamp. They continue to perfect the craft of app development and make a name for themselves
+            <p> Since 2012, we´ve helped countless companies across the globe build aplications that empower growth,
+                leave a lasting impression and transform their user experience. GigaTech was created in 2012 by a
+                trio of colleagues who met through a coding bootcamp. They continue to perfect the craft of app 
+                development and make a name for themselves.
             </p>
             <img src="assets/img/our-history-2.png" alt="business-man">
             <button>Read More</button>
         </section>
         <section>
-            <h4>PRODUCTS</h4>
-            <p>Features</p>
-            <p>Downloads</p>
-            <p>Integrations</p>
-            <p>Additional features</p>
-            <h4>COMPANY</h4>
-            <p>About us</p>
-            <p>Trusted by</p>
-            <p>Resources</p>
-            <p>Clients</p>
-            <h4>SUPPORT</h4>
-            <p>Help</p>
-            <p>Tutorial</p>
-            <p>API</p>
-            <p>Contact</p>
+            <table>
+                <tr>
+                    <th>products</th>
+                    <th>company</th>
+                    <th>support</th>
+                </tr>
+                <tr>
+                    <td>Features</td>
+                    <td>About us</td>
+                    <td>Help</td>
+                </tr>
+                <tr>
+                    <td>Downloads</td>
+                    <td>Trusted by</td>
+                    <td>Tutorials</td>
+                </tr>
+                <tr>
+                    <td>Integrations</td>
+                    <td>Resources</td>
+                    <td>API</td>
+                </tr>
+                <tr>
+                    <td>Additional features</td>
+                    <td>Clients</td>
+                    <td>Contact</td>
+                </tr>
+            </table>
         </section>
         <footer>
             <picture>
