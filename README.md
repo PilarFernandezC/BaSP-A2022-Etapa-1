@@ -4,6 +4,11 @@ Trackgenix is ​​a web system that records the hours worked by each employee 
 - Figma
 - HTML
 - Git / GitHub
+- CSS
+## Weekly Work
+- Week 01: layout of the website in figma
+- Week 02: structure the page with html
+- Week 03: design and style of the website with css
 ## Steps to run
 ```bash
     Login on your GitHub account
