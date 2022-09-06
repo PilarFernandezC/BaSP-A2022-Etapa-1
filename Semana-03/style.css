@@ -408,3 +408,58 @@ textarea {
 	text-align: center;
 	color: #FFFFFF;
 }
+
+#history-img-2 {
+    display: none;
+}
+
+#history-btn {
+    display: none;
+}
+
+#h2-history {
+    position: absolute;
+    top: 2390px;
+    left: 425px;
+    width: 160px;
+    height: 38px;
+}
+
+#p-history {
+    position: absolute;
+    top: 2473px;
+    left: 425px;
+    width: 560px;
+    height: 292px;
+    font-style: normal;
+    font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+#history-img {
+    position: absolute;
+    top: 2473px;
+    left: 1021px;
+    width: 456px;
+    height: 256px;
+}
+
+table {
+    position: relative;
+    top: 1950px;
+    left: 561px;
+    width: 834px;
+	height: 198px;
+	background: #FFFFFF;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: left;
+}
+
+th {
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
