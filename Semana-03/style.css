@@ -44,3 +44,99 @@ header input {
 header button {
     display: none;
 }
+
+aside {
+    position: fixed;
+    top: 126px;
+    width: 397px;
+    height: 3374px;
+    background: #FFFFFF;
+    border-right: 2px solid #BFBFBF;
+}
+
+aside h2 {
+    position: absolute;
+    left: 55px;
+    border-bottom: solid #AACE9B 3px;
+	padding-bottom: 32px;
+    font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+#h2-menu {
+    top: 80px;
+    width: 100px;
+}
+
+a {
+    position: absolute;
+    left: 55px;
+    width: 87%;
+    border-bottom: solid #CDCCCC 2px;
+    padding-bottom: 36px;
+    font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+#home {
+    top: 212px;
+}
+
+#signup {
+    top: 329px;
+}
+
+#login {
+    top: 446px;
+}
+
+#h2-contact {
+    top: 563px;
+}
+
+aside p {
+    position: absolute;
+    left: 113px;
+    font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+aside img {
+    position: absolute;
+    left: 55px;
+}
+
+#email-icon {
+    top: 657px;
+}
+
+#email {
+    top: 657px;
+    width: 264px;
+    height: 29px;
+}
+
+#phone-icon {
+    top: 700px;
+}
+
+#phone {
+    top: 702px;
+    height: 23px;
+}
+
+#house-icon {
+    top: 736px;
+    left: 43px;
+}
+
+#adress {
+    top: 742px;
+    width: 276px;
+}
