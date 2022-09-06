@@ -320,3 +320,91 @@ section > ul {
     left: 895px;
     line-height: 28px;
 }
+
+#h2-information {
+    position: absolute;
+    top: 1653px;
+    left: 437px;
+    width: 372px;
+}
+
+input, select, textarea {
+    padding: 10px 12px;
+    background: #FFFFFF;
+	border: 2px solid #AACE9B;
+	border-radius: 4px;
+    font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	color: #C4C4C4;
+}
+
+#name-input {
+    position: absolute;
+    top: 1741.5px;
+    right: 428px;
+    bottom: 1709.5px;
+    left: 425px;
+    height: 40px;
+}
+
+#email-input {
+    position: absolute;
+    top: 1821.05px;
+    right: 428px;
+    bottom: 1629.95px;
+    left: 425px;
+    height: 40px;
+}
+
+select {
+    position: absolute;
+    top: 1900px;
+    right: 428px;
+    bottom: 1550.85px;
+    left: 425px;
+    height: 50px;
+}
+
+textarea {
+    position: absolute;
+    top: 1978.9px;
+    right: 428px;
+    bottom: 1318px;
+    left: 425px;
+    height: 203px;
+}
+
+#cancel-btn {
+    position: absolute;
+    top: 2212px;
+    right: 583.02px;
+    bottom: 1237.95px;
+    left: 793.95;
+    padding: 16px 41px 28px 41px;
+    background: #FFFFFF;
+	border: 3px solid #AACE9B;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	color: #AACE9B;
+}
+
+#send-btn {
+    position: absolute;
+    top: 2212px;
+    right: 428px;
+    bottom: 1237.95px;
+    left: 930px;
+    padding: 18px 38px 28px 38px;
+    background: #AACE9B;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	color: #FFFFFF;
+}
