@@ -205,3 +205,86 @@ h3 {
 	text-align: center;
 	color: #AACE9B;
 }
+
+#features-img {
+    display: none;
+}
+
+section h2 {
+    font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+#h2-features {
+    position: relative;
+    top: 130px;
+    left: 437px;
+    width: 127px;
+}
+
+.features-div p {
+    font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+#clock-img {
+    position: absolute;
+    top: 813.72px;
+    left: 437px;
+    width: 91.68px;
+    height: 88.91;
+}
+
+#p-hours-log {
+    position: absolute;
+    top: 849.31px;
+    left: 600.27px;
+}
+
+#reports-img {
+    position: absolute;
+    top: 817.46px;
+	left: 815.21px;
+    width: 91.68px;
+    height: 88.91;
+}
+
+#p-reports {
+    position: absolute;
+    top: 849.31px;
+    left: 990.24px;
+}
+
+#resource-management-img {
+    position: absolute;
+    top: 969.3px;
+    left: 437.02px;
+    width: 91.68px;
+    height: 88.91px;
+}
+
+#p-resource-management {
+    position: absolute;
+    top: 993.57px;
+    left: 600.27px;
+    width: 194.82px;
+	height: 66.68px;
+}
+
+#multiple-role-img {
+    position: absolute;
+    top: 969.3px;
+    left: 815.21px;
+    width: 91.68px;
+	height: 88.91px;
+}
+
+#p-multiple-role {
+    position: absolute;
+    top: 996.38px;
+    left: 990.24px;
+}
