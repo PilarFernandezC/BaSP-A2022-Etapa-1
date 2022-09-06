@@ -211,6 +211,8 @@ h3 {
 }
 
 section h2 {
+    border-bottom: solid #AACE9B 3px;
+    padding-bottom: 13px;
     font-style: normal;
 	font-weight: 700;
 	font-size: 32px;
@@ -462,4 +464,45 @@ table {
 th {
     text-transform: uppercase;
     padding-bottom: 40px;
+}
+
+#twitter-icon {
+    position: absolute;
+    top: 3277px;
+    left: 842px;
+}
+
+#facebook-icon {
+    position: absolute;
+    top: 3277px;
+    left: 893px;
+}
+
+#linkedin-icon{
+    position: absolute;
+    top: 3277px;
+    left: 944px;
+}
+
+#instagram-icon {
+    position: absolute;
+    top: 3277px;
+    left: 993px;
+}
+
+#github-icon {
+    position: absolute;
+    top: 3275px;
+    left: 1037px;
+}
+
+#div-footer {
+    position: relative;
+    top: 2200px;
+    left: 210px;
+    text-align: center;
+    font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
 }
