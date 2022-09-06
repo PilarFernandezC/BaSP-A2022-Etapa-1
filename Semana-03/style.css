@@ -1,0 +1,46 @@
+* {
+	font-family: 'Roboto', sans-serif;
+    color: #373867; 
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+	height: 126px;
+	width: 1512;
+    background-color: #AACE9B;
+}
+
+#menu-icon {
+    position: relative;
+    top: 41px;
+    left: 46px;
+    width: 45px;
+    height: 44.61px;
+}
+
+#search-icon {
+    position: relative;
+    top: 30px;
+    left: 605px;
+    z-index: 10;
+}
+
+header input {
+    position: relative;
+    top: 25px;
+    left: 568px;
+    width: 375px;
+    height: 34px;
+    background: #D8E7EB;
+	border: 1px solid #D6D6D6;
+	border-radius: 50px;
+    padding: 0px;
+}
+
+header button {
+    display: none;
+}
