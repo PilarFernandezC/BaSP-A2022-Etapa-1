@@ -140,3 +140,68 @@ aside img {
     top: 742px;
     width: 276px;
 }
+
+h1 {
+    position: relative;
+    top: 191px;
+    left: 425px;
+    font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 56px;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+}
+
+h3 {
+    position: relative;
+    top: 220px;
+    left: 425px;
+    font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #AACE9B;
+}
+
+#trackgenix-p {
+    position: relative;
+    top: 250px;
+    left: 425px;
+    width: 617px;
+    height: 62px;
+    font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+#main-img {
+    position: relative;
+    top: 50px;
+    left: 1019px;
+    width: 458px;
+    height: 449px;
+}
+
+#main-button {
+    position: absolute;
+    top: 432px;
+    right: 921px;
+    bottom: 2996px;
+    left: 425px;
+    box-sizing: border-box;
+    width: 166px;
+    height: 72px;
+    padding: 24px 34px;
+    background: #FFFFFF;
+	border: 3px solid #AACE9B;
+	border-radius: 5px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	color: #AACE9B;
+}
