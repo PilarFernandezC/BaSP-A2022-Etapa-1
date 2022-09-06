@@ -288,3 +288,35 @@ section h2 {
     top: 996.38px;
     left: 990.24px;
 }
+
+#h2-why-use {
+    position: relative;
+    top: 530px;
+    left: 437px;
+    width: 304px;
+}
+
+#why-use-img {
+    position: relative;
+    top: 590px;
+    left: 421px;
+    width: 331px;
+    height: 241px;
+}
+
+li {
+    font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+    list-style-image: url(../assets/svg/vector-icon.svg);
+    padding-bottom: 43px;
+	padding-left: 31.12px
+}
+
+section > ul {
+    position: absolute;
+    top: 1270px;
+    left: 895px;
+    line-height: 28px;
+}
