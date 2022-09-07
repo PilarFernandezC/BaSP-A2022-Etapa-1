@@ -74,12 +74,25 @@ a {
     position: absolute;
     left: 55px;
     width: 87%;
-    border-bottom: solid #CDCCCC 2px;
-    padding-bottom: 36px;
     font-style: normal;
 	font-weight: 400;
 	font-size: 30px;
 	line-height: 35px;
+}
+
+#border-bottom-1 {
+    border-bottom: solid #CDCCCC 2px;
+    padding-bottom: 293px;
+}
+
+#border-bottom-2 {
+    border-bottom: solid #CDCCCC 2px;
+    padding-bottom: 117px;
+}
+
+#border-bottom-3 {
+    border-bottom: solid #CDCCCC 2px;
+    padding-bottom: 115px;
 }
 
 #home {
