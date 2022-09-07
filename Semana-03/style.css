@@ -462,8 +462,19 @@ table {
 }
 
 th {
+    width: 33.3%;
     text-transform: uppercase;
     padding-bottom: 40px;
+    padding-left: 42px;
+}
+
+td {
+    width: 33.3%;
+    padding-left: 42px;
+}
+
+.border {
+    border-right: 2px solid #909090;
 }
 
 #twitter-icon {
