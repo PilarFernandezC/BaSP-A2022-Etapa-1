@@ -1,0 +1,19 @@
+footer div {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#div-footer {
+    flex-direction: column;
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+footer div img {
+    width: 4%;
+    margin: 5px;
+}
