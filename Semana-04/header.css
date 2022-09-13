@@ -50,3 +50,18 @@ header input {
         height: 36px;
     }
 }
+
+@media screen and (min-width:1512px) { 
+    header {
+        justify-content: center;
+        height: 125px;
+    }
+    #menu-icon {
+        display: none;
+    }
+    #search-icon {
+        position: absolute;
+        top: 55px;
+        left: 575px;
+    }
+}

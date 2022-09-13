@@ -25,3 +25,9 @@ footer div img {
         line-height: 28px;
     }
 }
+
+@media screen and (min-width:1512px) { 
+    footer div {
+        padding: 45px;
+    }
+}
