@@ -18,6 +18,16 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    width: fit-content;
+    margin-left: 30px;
+    padding: 30px 0px 5px 0px;
+    border-bottom: solid #AACE9B 2px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
 h3 {
     padding-bottom: 5px;
     font-weight: 700;
@@ -43,21 +53,11 @@ h3 {
     display: none;
 }
 
-h2 {
-    width: fit-content;
-    margin-left: 30px;
-    padding: 30px 0px 5px 0px;
-    border-bottom: solid #AACE9B 2px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-}
-
 .features-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 0px;
+    padding: 15px 20px;
 }
 
 .features-row p {
@@ -185,6 +185,11 @@ td {
         font-size: 68px;
         line-height: 80px;
     }
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+    }
     h3 {
         font-weight: 700;
         font-size: 21px;
@@ -198,11 +203,6 @@ td {
         font-weight: 400;
         font-size: 30px;
         line-height: 35px;
-    }
-    h2 {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
     }
     #h2-features {
         width: fit-content;
@@ -237,7 +237,7 @@ td {
     }
     div input, select, textarea {
         width: 744px;
-        margin: 20px 45px;
+        margin: 20px 40px;
         border: 2px solid #AACE9B;
         font-style: normal;
         font-weight: 400;

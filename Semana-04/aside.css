@@ -1,6 +1,12 @@
 aside {
     display: none;
 }
+a, p, h2 {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #373867; 
+}
 
 @media screen and (min-width:1512px) { 
     aside {

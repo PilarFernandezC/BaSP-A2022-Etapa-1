@@ -5,10 +5,14 @@ Trackgenix is ​​a web system that records the hours worked by each employee 
 - HTML
 - Git / GitHub
 - CSS
+- Flexbox
 ## Weekly Work
 - Week 01: layout of the website in figma
 - Week 02: structure the page with html
 - Week 03: design and style of the website with css
+- Week 04: responsive design with flexbox - Mobile first
+## GitHub Pages
+- Week 04 - Responsive Design: [Landing Page - Trackgenix](https://pilarfernandezc.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
 ## Steps to run
 ```bash
     Login on your GitHub account
@@ -16,7 +20,7 @@ Trackgenix is ​​a web system that records the hours worked by each employee 
     Click on Code -> Download ZIP
     Save the folder on your computer 
     Extract the files from the folder 
-    Open index.html on your broser 
+    Open index.html that corresponds to the week you want to see on your browser 
 ```
 ## Author
 - [@PilarFernández](https://www.github.com/PilarFernandezC)
