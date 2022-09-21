@@ -5,10 +5,10 @@ console.log('\n-Exercise 4.a:');
 var num=Math.random();
 console.log(num);
 if (num>=0.5) {
-    console.log('greater than 0,5');
+    alert('greater than 0,5');
 }
 else {
-    console.log('lower than 0,5');
+    alert('lower than 0,5');
 }
 /*b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
 “Bebe” si la edad es menor a 2 años;
