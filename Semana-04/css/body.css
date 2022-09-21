@@ -1,7 +1,7 @@
 * {
 	font-family: 'Roboto', sans-serif;
     font-style: normal;
-    color: #373867; 
+    color: #373867;
 }
 
 #section-trackgenix {
@@ -37,13 +37,11 @@ h3 {
 }
 
 #main-img {
-    margin: auto;
     height: 144px;
 }
 
 #trackgenix-p {
     padding: 5px 54px;
-    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -83,21 +81,17 @@ h3 {
 
 li {
     padding: 10px;
-    font-weight: 400;
     font-size: 12px;
-    list-style-image: url(../assets/svg/vector-icon.svg);
+    list-style-image: url(../../assets/svg/vector-icon.svg);
 }
 
 div input, select, textarea {
     box-sizing: border-box;
-    width: 300px;
+    width: 330px;
     margin: 10px 0px 0px 30px;
     padding: 10px 12px;
-    background: #FFFFFF;
 	border: 1px solid #AACE9B;
 	border-radius: 4px;
-    font-style: normal;
-	font-weight: 400;
 	font-size: 13px;
 	line-height: 15px;
 	color: #C4C4C4;
@@ -119,11 +113,12 @@ textarea {
     width: 80px;
     margin: 10px 15px 0px 0px;
     color: #AACE9B;
+    background: #FFFFFF;
 }
 
 #send-btn {
     width: 80px;
-    margin: 10px 35px 0px 0px;
+    margin: 10px 13px 0px 0px;
     background: #AACE9B;
     color: #FFFFFF;
 }
@@ -134,7 +129,6 @@ textarea {
 
 .p-history {
     width: 85%;
-    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     text-align: justify;
@@ -161,7 +155,6 @@ table {
 
 th {
     padding: 0px 15px 15px 25px;
-    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
@@ -169,7 +162,6 @@ th {
 
 td {
     padding: 0px 10px 4px 25px;
-    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
 }
@@ -178,20 +170,17 @@ td {
     border-right: 1px solid #373867;
 }
 
-@media screen and (min-width:834px) { 
+@media screen and (min-width:834px) {
     h1 {
         padding-top: 50px;
-        font-weight: 700;
         font-size: 68px;
         line-height: 80px;
     }
     h2 {
-        font-weight: 700;
         font-size: 32px;
         line-height: 38px;
     }
     h3 {
-        font-weight: 700;
         font-size: 21px;
         line-height: 25px;
     }
@@ -200,7 +189,6 @@ td {
     }
     #trackgenix-p{
         padding: 15px 136px;
-        font-weight: 400;
         font-size: 30px;
         line-height: 35px;
     }
@@ -213,7 +201,6 @@ td {
     }
     .features-row p {
         width: 240px;
-        font-weight: 700;
         font-size: 24px;
         line-height: 28px;
     }
@@ -239,8 +226,6 @@ td {
         width: 744px;
         margin: 20px 40px;
         border: 2px solid #AACE9B;
-        font-style: normal;
-        font-weight: 400;
         font-size: 24px;
         line-height: 28px;
     }
@@ -262,7 +247,6 @@ td {
     }
     .p-history {
         width: 90%;
-        font-weight: 400;
         font-size: 24px;
         line-height: 28px;
         text-align: center;
@@ -285,7 +269,7 @@ td {
     }
   }
 
-  @media screen and (min-width:1512px) { 
+  @media screen and (min-width:1512px) {
     .container {
         display: flex;
     }
