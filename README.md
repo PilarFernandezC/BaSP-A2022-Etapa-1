@@ -11,8 +11,10 @@ Trackgenix is ​​a web system that records the hours worked by each employee 
 - Week 02: structure the page with html
 - Week 03: design and style of the website with css
 - Week 04: responsive design with flexbox - Mobile first
+- Week 05: JavaScript
 ## GitHub Pages
 - Week 04 - Responsive Design: [Landing Page - Trackgenix](https://pilarfernandezc.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html)
+- Week 05 - JavaScript: [JavaScript Exercises](https://pilarfernandezc.github.io/BaSP-A2022-Etapa-1/Semana-05/index.html)
 ## Steps to run
 ```bash
     Login on your GitHub account
