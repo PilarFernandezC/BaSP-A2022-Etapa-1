@@ -22,7 +22,8 @@ window.onload = function () {
         while (contLetter <= 3 && i2 <= input2.value.length) {
             if ((input2.value.charCodeAt(i2) > 64 && input2.value.charCodeAt(i2) < 91) || 
             (input2.value.charCodeAt(i2) > 96 && input2.value.charCodeAt(i2) < 123) || 
-            (input2.value.charCodeAt(i2) > 129 && input2.value.charCodeAt(i2) < 131) || (input2.value.charCodeAt(i2) > 159 && input2.value.charCodeAt(i2) < 166)) {
+            (input2.value.charCodeAt(i2) > 129 && input2.value.charCodeAt(i2) < 131) || 
+            (input2.value.charCodeAt(i2) > 159 && input2.value.charCodeAt(i2) < 166)) {
                 contLetter = contLetter + 1;
             }
             i2 = i2 + 1;
@@ -33,8 +34,8 @@ window.onload = function () {
     function validateAll (input3) {
         var end3 = input3.value.length -1;
         for (i3=0; i3<=end3; i3++) {
-            if (input3.value.charCodeAt(i3) < 32 || (input3.value.charCodeAt(i3) > 32 && input3.value.charCodeAt(i3) < 48)
-             || (input3.value.charCodeAt(i3) > 57 && input3.value.charCodeAt(i3) < 65) || 
+            if (input3.value.charCodeAt(i3) < 32 || (input3.value.charCodeAt(i3) > 32 && input3.value.charCodeAt(i3) 
+            < 48) || (input3.value.charCodeAt(i3) > 57 && input3.value.charCodeAt(i3) < 65) || 
              (input3.value.charCodeAt(i3) > 90 && input3.value.charCodeAt(i3) < 97) ||
             (input3.value.charCodeAt(i3) > 122 && input3.value.charCodeAt(i3) < 130) || 
             (input3.value.charCodeAt(i3) > 130 && input3.value.charCodeAt(i3) < 160) ||
@@ -74,7 +75,8 @@ window.onload = function () {
     }
 
     function validatePassword() {
-        if (inputPassword.value.length < 8 || validateAll(inputPassword) || countSpaces(inputPassword) !== 0 || countLetters(inputPassword) == 0 || countNumbers(inputPassword) == 0) {
+        if (inputPassword.value.length < 8 || validateAll(inputPassword) || countSpaces(inputPassword) !== 0 || 
+        countLetters(inputPassword) == 0 || countNumbers(inputPassword) == 0) {
             return true;
         } else {
             return false;

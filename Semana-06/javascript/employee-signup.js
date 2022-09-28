@@ -4,7 +4,7 @@ window.onload = function () {
     var inputDni = document.getElementById('dni');
     var inputDateOfBirth = document.getElementById('date-of-birth');
     var inputTelephone = document.getElementById('telephone');
-    var inputAdress = document.getElementById('adress');
+    var inputAddress = document.getElementById('address');
     var inputCity = document.getElementById('city');
     var inputPostalCode = document.getElementById('postal-code');
     var inputEmail = document.getElementById('email');
@@ -15,11 +15,13 @@ window.onload = function () {
     function validateLetter (input1) {
         var end1 = input1.value.length - 1;
         for (i=0; i<=end1; i++){
-            if (input1.value.charCodeAt(i) < 32 || (input1.value.charCodeAt(i) > 32 && input1.value.charCodeAt(i) < 65) || (input1.value.charCodeAt(i) > 90 && input1.value.charCodeAt(i) < 97) || 
+            if (input1.value.charCodeAt(i) < 32 || (input1.value.charCodeAt(i) > 32 && input1.value.charCodeAt(i) < 65)
+             || (input1.value.charCodeAt(i) > 90 && input1.value.charCodeAt(i) < 97) || 
             (input1.value.charCodeAt(i) > 122 && input1.value.charCodeAt(i) < 130) || 
-            (input1.value.charCodeAt(i) > 130 && input1.value.charCodeAt(i) < 160) || input1.value.charCodeAt(i) > 165) {
+            (input1.value.charCodeAt(i) > 130 && input1.value.charCodeAt(i) < 160) || 
+            input1.value.charCodeAt(i) > 165) {
                 return true;
-            } 
+            }
         }
     }
 
@@ -72,14 +74,15 @@ window.onload = function () {
         return contNumber;
     }
 
-    // hago que el contador llegue a 3 para que no solo sirva para el adress sino también para el city
+    // I make contLetter <= 3 so that it not only works for address but also for city
     function countLetters (input6) {
         var contLetter = 0;
         var i2 = 0;
         while (contLetter <= 3 && i2 <= input6.value.length) {
             if ((input6.value.charCodeAt(i2) > 64 && input6.value.charCodeAt(i2) < 91) || 
             (input6.value.charCodeAt(i2) > 96 && input6.value.charCodeAt(i2) < 123) || 
-            (input6.value.charCodeAt(i2) > 129 && input6.value.charCodeAt(i2) < 131) || (input6.value.charCodeAt(i2) > 159 && input6.value.charCodeAt(i2) < 166)) {
+            (input6.value.charCodeAt(i2) > 129 && input6.value.charCodeAt(i2) < 131) || 
+            (input6.value.charCodeAt(i2) > 159 && input6.value.charCodeAt(i2) < 166)) {
                 contLetter = contLetter + 1;
             }
             i2 = i2 + 1;
@@ -192,25 +195,26 @@ window.onload = function () {
         inputTelephone.classList.remove('green-border');
     }
 
-    function validateAdress () {
-        if (inputAdress.value.length <= 4 || validateAll(inputAdress) || countSpaces(inputAdress) == 0 || countNumbers(inputAdress) == 0 || countLetters(inputAdress) == 0) {
+    function validateAddress () {
+        if (inputAddress.value.length <= 4 || validateAll(inputAddress) || countSpaces(inputAddress) == 0 || 
+        countNumbers(inputAddress) == 0 || countLetters(inputAddress) == 0) {
             return true;
         } else {
             return false;
         }
     }
 
-    inputAdress.onblur = function () {
-        if (validateAdress()) {
-            inputAdress.classList.add('red-border');
+    inputAddress.onblur = function () {
+        if (validateAddress()) {
+            inputAddress.classList.add('red-border');
         } else {
-            inputAdress.classList.add('green-border');
+            inputAddress.classList.add('green-border');
         }
     }
 
-    inputAdress.onfocus = function () {
-        inputAdress.classList.remove('red-border');
-        inputAdress.classList.remove('green-border');
+    inputAddress.onfocus = function () {
+        inputAddress.classList.remove('red-border');
+        inputAddress.classList.remove('green-border');
     }
 
     function validateCity () {
@@ -273,7 +277,8 @@ window.onload = function () {
     }
 
     function validatePassword() {
-        if (inputPassword.value.length < 8 || validateAll(inputPassword) || countSpaces(inputPassword) !== 0 || countLetters(inputPassword) == 0 || countNumbers(inputPassword) == 0) {
+        if (inputPassword.value.length < 8 || validateAll(inputPassword) || countSpaces(inputPassword) !== 0 || 
+        countLetters(inputPassword) == 0 || countNumbers(inputPassword) == 0) {
             return true;
         } else {
             return false;
@@ -294,7 +299,9 @@ window.onload = function () {
     }
 
     function validateConfirmPassword() {
-        if (inputConfirmPassword.value.length < 8 || validateAll(inputConfirmPassword) || countSpaces(inputConfirmPassword) !== 0 || countLetters(inputConfirmPassword) == 0 || countNumbers(inputConfirmPassword) == 0) {
+        if (inputConfirmPassword.value.length < 8 || validateAll(inputConfirmPassword) || 
+        countSpaces(inputConfirmPassword) !== 0 || countLetters(inputConfirmPassword) == 0 || 
+        countNumbers(inputConfirmPassword) == 0) {
             return true;
         } else {
             return false;
@@ -351,10 +358,10 @@ window.onload = function () {
             confirmMessage.push('Telephone: ' + inputTelephone.value);
         }
 
-        if (validateAdress()) {
-            errorMessage.push('adress');
+        if (validateAddress()) {
+            errorMessage.push('address');
         } else {
-            confirmMessage.push('Adress: ' + inputAdress.value);
+            confirmMessage.push('Address: ' + inputAddress.value);
         }
 
         if (validateCity()) {
