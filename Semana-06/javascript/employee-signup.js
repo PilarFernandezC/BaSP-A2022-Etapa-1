@@ -5,6 +5,8 @@ window.onload = function () {
     var inputDateOfBirth = document.getElementById('date-of-birth');
     var inputTelephone = document.getElementById('telephone');
     var inputAdress = document.getElementById('adress');
+    var inputCity = document.getElementById('city');
+    var inputPostalCode = document.getElementById('postal-code');
 
     function validateLetter (input1) {
         var end1 = input1.value.length - 1;
@@ -207,6 +209,48 @@ window.onload = function () {
         inputAdress.classList.remove('green-border');
     }
 
+    function validateCity () {
+        if (validateAll(inputCity) || countLetters(inputCity) <= 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputCity.onblur = function () {
+        if (validateCity()) {
+            inputCity.classList.add('red-border');
+        } else {
+            inputCity.classList.add('green-border');
+        }
+    }
+
+    inputCity.onfocus = function () {
+        inputCity.classList.remove('red-border');
+        inputCity.classList.remove('green-border');
+    }
+
+    function validatePostalCode () {
+        if (validateNumber(inputPostalCode) || inputPostalCode.value.length < 4 || inputPostalCode.value.length > 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputPostalCode.onblur = function () {
+        if (validatePostalCode()) {
+            inputPostalCode.classList.add('red-border');
+        } else {
+            inputPostalCode.classList.add('green-border');
+        }
+    }
+
+    inputPostalCode.onfocus = function () {
+        inputPostalCode.classList.remove('red-border');
+        inputPostalCode.classList.remove('green-border');
+    }
+
     var submitButton = document.getElementById('btn');
     submitButton.onclick = function(e) {
         e.preventDefault();
@@ -248,6 +292,18 @@ window.onload = function () {
             errorMessage.push('adress');
         } else {
             confirmMessage.push('Adress: ' + inputAdress.value);
+        }
+
+        if (validateCity()) {
+            errorMessage.push('city');
+        } else {
+            confirmMessage.push('City: ' + inputCity.value);
+        }
+
+        if (validatePostalCode()) {
+            errorMessage.push('postal code');
+        } else {
+            confirmMessage.push('Postal code: ' + inputPostalCode.value);
         }
 
         if (errorMessage.length !== 0) {
