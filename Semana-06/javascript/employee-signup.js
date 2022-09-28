@@ -7,6 +7,10 @@ window.onload = function () {
     var inputAdress = document.getElementById('adress');
     var inputCity = document.getElementById('city');
     var inputPostalCode = document.getElementById('postal-code');
+    var inputEmail = document.getElementById('email');
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    var inputPassword = document.getElementById('password');
+    var inputConfirmPassword = document.getElementById('confirm-password');
 
     function validateLetter (input1) {
         var end1 = input1.value.length - 1;
@@ -251,6 +255,65 @@ window.onload = function () {
         inputPostalCode.classList.remove('green-border');
     }
 
+    function validateEmail() {
+        return emailExpression.test(inputEmail.value);
+    }
+
+    inputEmail.onblur = function () {
+        if (!validateEmail()) {
+            inputEmail.classList.add('red-border');
+        } else {
+            inputEmail.classList.add('green-border');
+        }
+    }
+
+    inputEmail.onfocus = function () {
+        inputEmail.classList.remove('red-border');
+        inputEmail.classList.remove('green-border');
+    }
+
+    function validatePassword() {
+        if (inputPassword.value.length < 8 || validateAll(inputPassword) || countSpaces(inputPassword) !== 0 || countLetters(inputPassword) == 0 || countNumbers(inputPassword) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputPassword.onblur = function () {
+        if (validatePassword()) {
+            inputPassword.classList.add('red-border');
+        } else {
+            inputPassword.classList.add('green-border');
+        }
+    }
+
+    inputPassword.onfocus = function () {
+        inputPassword.classList.remove('red-border');
+        inputPassword.classList.remove('green-border');
+    }
+
+    function validateConfirmPassword() {
+        if (inputConfirmPassword.value.length < 8 || validateAll(inputConfirmPassword) || countSpaces(inputConfirmPassword) !== 0 || countLetters(inputConfirmPassword) == 0 || countNumbers(inputConfirmPassword) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputConfirmPassword.onblur = function () {
+        if (validateConfirmPassword()) {
+            inputConfirmPassword.classList.add('red-border');
+        } else {
+            inputConfirmPassword.classList.add('green-border');
+        }
+    }
+
+    inputConfirmPassword.onfocus = function () {
+        inputConfirmPassword.classList.remove('red-border');
+        inputConfirmPassword.classList.remove('green-border');
+    }
+
     var submitButton = document.getElementById('btn');
     submitButton.onclick = function(e) {
         e.preventDefault();
@@ -304,6 +367,24 @@ window.onload = function () {
             errorMessage.push('postal code');
         } else {
             confirmMessage.push('Postal code: ' + inputPostalCode.value);
+        }
+
+        if (!validateEmail()) {
+            errorMessage.push('email')
+        } else {
+            confirmMessage.push('Email: ' + inputEmail.value);
+        }
+
+        if (validatePassword()) {
+            errorMessage.push('password');
+        } else {
+            confirmMessage.push('Password: ' + inputPassword.value);
+        }
+
+        if(validateConfirmPassword()) {
+            errorMessage.push('confirm password');
+        } else {
+            confirmMessage.push('Confirm password: ' + inputConfirmPassword.value);
         }
 
         if (errorMessage.length !== 0) {
