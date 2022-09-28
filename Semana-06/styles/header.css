@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #AACE9B;
+}
+
+#menu-icon {
+    margin: 0px 87px 0px 15px;
+    width: 15px;
+    height: 15px;
+}
+
+#logo {
+    margin-left: 20px;
+}
+
+@media screen and (min-width:834px) {
+    header {
+        height: 92px;
+    }
+
+    #menu-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 180px;
+    }
+
+    #logo {
+        height: 92px;
+        margin: 0px;
+    }
+}
+
+@media screen and (min-width:1512px) {
+    header {
+        justify-content: center;
+        height: 125px;
+    }
+    
+    #menu-icon {
+        display: none;
+    }
+
+    #logo {
+        height: 125px;
+    }
+}
