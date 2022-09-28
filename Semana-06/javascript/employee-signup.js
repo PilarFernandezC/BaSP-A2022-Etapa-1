@@ -3,6 +3,8 @@ window.onload = function () {
     var inputSurname = document.getElementById('surname');
     var inputDni = document.getElementById('dni');
     var inputDateOfBirth = document.getElementById('date-of-birth');
+    var inputTelephone = document.getElementById('telephone');
+    var inputAdress = document.getElementById('adress');
 
     function validateLetter (input1) {
         var end1 = input1.value.length - 1;
@@ -24,6 +26,59 @@ window.onload = function () {
                 return false;
             }
         }
+    }
+
+    function validateAll (input3) {
+        var end3 = input3.value.length -1;
+        for (i=0; i<=end3; i++) {
+            if (input3.value.charCodeAt(i) < 32 || (input3.value.charCodeAt(i) > 32 && input3.value.charCodeAt(i) < 48)
+             || (input3.value.charCodeAt(i) > 57 && input3.value.charCodeAt(i) < 65) || 
+             (input3.value.charCodeAt(i) > 90 && input3.value.charCodeAt(i) < 97) ||
+            (input3.value.charCodeAt(i) > 122 && input3.value.charCodeAt(i) < 130) || 
+            (input3.value.charCodeAt(i) > 130 && input3.value.charCodeAt(i) < 160) ||
+            (input3.value.charCodeAt(i) > 165)) {
+                return true;
+            }
+        }
+    }
+
+    function countSpaces (input4) {
+        var contSpace = 0;
+        var i = 0;
+        while (contSpace == 0 && i <= input4.value.length) {
+            if (input4.value.charCodeAt(i) == 32) {
+                contSpace = contSpace + 1;
+            }
+            i = i + 1;
+        }
+        return contSpace;
+    }
+
+    function countNumbers (input5) {
+        var contNumber = 0;
+        var i1 = 0;
+        while (contNumber == 0 && i1 <= input5.value.length) {
+            if ((input5.value.charCodeAt(i1) > 47) && (input5.value.charCodeAt(i1) < 58)) {
+                contNumber = contNumber + 1;
+            }
+            i1 = i1 + 1;
+        }
+        return contNumber;
+    }
+
+    // hago que el contador llegue a 3 para que no solo sirva para el adress sino también para el city
+    function countLetters (input6) {
+        var contLetter = 0;
+        var i2 = 0;
+        while (contLetter <= 3 && i2 <= input6.value.length) {
+            if ((input6.value.charCodeAt(i2) > 64 && input6.value.charCodeAt(i2) < 91) || 
+            (input6.value.charCodeAt(i2) > 96 && input6.value.charCodeAt(i2) < 123) || 
+            (input6.value.charCodeAt(i2) > 129 && input6.value.charCodeAt(i2) < 131) || (input6.value.charCodeAt(i2) > 159 && input6.value.charCodeAt(i2) < 166)) {
+                contLetter = contLetter + 1;
+            }
+            i2 = i2 + 1;
+        }
+        return contLetter;
     }
 
     function validateName () {
@@ -110,6 +165,48 @@ window.onload = function () {
         inputDateOfBirth.classList.remove('green-border');
     }
 
+    function validateTelephone () {
+        if (validateNumber(inputTelephone) || inputTelephone.value.length !== 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputTelephone.onblur = function () {
+        if (validateTelephone()) {
+            inputTelephone.classList.add('red-border');
+        } else {
+            inputTelephone.classList.add('green-border');
+        }
+    }
+
+    inputTelephone.onfocus = function () {
+        inputTelephone.classList.remove('red-border');
+        inputTelephone.classList.remove('green-border');
+    }
+
+    function validateAdress () {
+        if (inputAdress.value.length <= 4 || validateAll(inputAdress) || countSpaces(inputAdress) == 0 || countNumbers(inputAdress) == 0 || countLetters(inputAdress) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    inputAdress.onblur = function () {
+        if (validateAdress()) {
+            inputAdress.classList.add('red-border');
+        } else {
+            inputAdress.classList.add('green-border');
+        }
+    }
+
+    inputAdress.onfocus = function () {
+        inputAdress.classList.remove('red-border');
+        inputAdress.classList.remove('green-border');
+    }
+
     var submitButton = document.getElementById('btn');
     submitButton.onclick = function(e) {
         e.preventDefault();
@@ -139,6 +236,18 @@ window.onload = function () {
             errorMessage.push('date of birth');
         } else {
             confirmMessage.push('Date of birth: ' + inputDateOfBirth.value)
+        }
+
+        if (validateTelephone()) {
+            errorMessage.push('telephone');
+        } else {
+            confirmMessage.push('Telephone: ' + inputTelephone.value);
+        }
+
+        if (validateAdress()) {
+            errorMessage.push('adress');
+        } else {
+            confirmMessage.push('Adress: ' + inputAdress.value);
         }
 
         if (errorMessage.length !== 0) {
