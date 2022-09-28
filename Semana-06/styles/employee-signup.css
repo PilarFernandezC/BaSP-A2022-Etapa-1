@@ -1,0 +1,115 @@
+section {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #373867;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 1150px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px #c4c4c4;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+form a img {
+    height: 15px;
+    padding: 20px 260px 20px 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+label {
+    align-self: flex-start;
+    padding: 30px 0px 5px 0px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div a {
+    align-self: center;
+    padding-top: 20px;
+}
+
+#btn {
+    align-self: center;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #AACE9B;
+    border-color: #AACE9B;
+}
+
+.red-border {
+    border: 2px solid red;
+}
+
+.green-border {
+    border: 2px solid green;
+}
+
+@media screen and (min-width:834px) {
+    form {
+        height: 650px;
+        width: 80%;;
+    }
+
+    form a img {
+        height: 15px;
+        padding-left: 0px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+
+    div {
+        width: 40%;
+    }
+
+    label {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:1512px) {
+    form {
+        height: 650px;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    form a img {
+        padding: 20px 300px 20px 0px;
+    }
+
+    div {
+        height: 450px;
+    }
+}
+
+
