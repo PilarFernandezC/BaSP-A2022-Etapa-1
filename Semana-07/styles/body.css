@@ -1,0 +1,358 @@
+* {
+	font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    color: #373867;
+}
+
+#section-trackgenix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding: 5px 0px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+}
+
+h2 {
+    width: fit-content;
+    margin-left: 30px;
+    padding: 30px 0px 5px 0px;
+    border-bottom: solid #AACE9B 2px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+h3 {
+    padding-bottom: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #AACE9B;
+}
+
+#main-img {
+    height: 144px;
+}
+
+#trackgenix-p {
+    padding: 5px 54px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+#main-button {
+    display: none;
+}
+
+.features-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.features-row p {
+    width: 100px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.features-row img {
+    width: 40px;
+    height: 40px;
+}
+
+#why-use-container {
+    display: flex;
+}
+
+#why-use-img {
+    height: 95px;
+    margin: auto;
+}
+
+li {
+    padding: 10px;
+    font-size: 12px;
+    list-style-image: url(../../assets/svg/vector-icon.svg);
+}
+
+div input, select, textarea {
+    box-sizing: border-box;
+    width: 330px;
+    margin: 10px 0px 0px 30px;
+    padding: 10px 12px;
+	border: 1px solid #AACE9B;
+	border-radius: 4px;
+	font-size: 13px;
+	line-height: 15px;
+	color: #C4C4C4;
+}
+
+textarea {
+    height: 100px;
+}
+
+#btn {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#cancel-btn {
+    width: 80px;
+    margin: 10px 15px 0px 0px;
+    color: #AACE9B;
+    background: #FFFFFF;
+}
+
+#send-btn {
+    width: 80px;
+    margin: 10px 13px 0px 0px;
+    background: #AACE9B;
+    color: #FFFFFF;
+}
+
+#h2-history {
+    margin-bottom: 20px;
+}
+
+.p-history {
+    width: 85%;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: justify;
+}
+
+#history-img {
+    margin: 20px 0px 30px 0px;
+    height: 155px;
+}
+
+#history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    display: flex;
+    padding-bottom: 25px;
+    border-bottom: 3px solid #AACE9B;
+    justify-content: center;
+    text-align: left;
+}
+
+th {
+    padding: 0px 15px 15px 25px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0px 10px 4px 25px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.border {
+    border-right: 1px solid #373867;
+}
+
+@media screen and (min-width:834px) {
+    h1 {
+        padding-top: 50px;
+        font-size: 68px;
+        line-height: 80px;
+    }
+    h2 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    h3 {
+        font-size: 21px;
+        line-height: 25px;
+    }
+    #main-img {
+        height: 230px;
+    }
+    #trackgenix-p{
+        padding: 15px 136px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    #h2-features {
+        width: fit-content;
+    }
+    .features-row img {
+        width: 90px;
+        height: 90px;
+    }
+    .features-row p {
+        width: 240px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    #h2-why-use {
+        width: fit-content;
+    }
+    #why-use-img {
+        height: 210px;
+    }
+    li {
+        padding: 12px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    li:first-child {
+        padding-top: 30px;
+    }
+    #h2-information {
+        padding-top: 50px;
+        width: fit-content;
+    }
+    div input, select, textarea {
+        width: 744px;
+        margin: 20px 40px;
+        border: 2px solid #AACE9B;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    textarea {
+        height: 200px;
+    }
+    #btn {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    #cancel-btn {
+        padding: 15px 40px;
+        width: fit-content;
+    }
+    #send-btn {
+        padding: 15px 50px;
+        width: fit-content;
+    }
+    .p-history {
+        width: 90%;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+    #p-history-3 {
+        display: none;
+    }
+    #history-img {
+        margin: 20px 0px 30px 0px;
+        height: 200px;
+    }
+    th, td {
+        padding: 2px 55px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    th {
+        padding-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width:1512px) {
+    .container {
+        display: flex;
+    }
+    #section-trackgenix {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 30px;
+        height: 400px;
+    }
+    h1 {
+        padding-top: 10px;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: 0.3em;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+    #main-img {
+        height: 400px;
+        order: 2;
+    }
+    #trackgenix-p {
+        padding: 0px;
+        max-width: 600px;
+        text-align: left;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    #main-button {
+        display: flex;
+        padding: 25px 35px;
+        background: #FFFFFF;
+        border: 3px solid #AACE9B;
+        border-radius: 5px;
+        color: #AACE9B;
+    }
+    .features-row {
+        padding: 15px 200px 15px 0px;
+    }
+    .features-row p {
+        width: 250px;
+    }
+    #why-use-img {
+        margin: 45px 100px 45px 24px;
+        height: 241px;
+    }
+    li{
+        padding: 25px;
+    }
+    div input, select, textarea {
+        width: 659px;
+        margin: 15px 30px;
+    }
+    #btn {
+        display: flex;
+        justify-content: center;
+    }
+    #cancel-btn {
+        padding: 15px 40px;
+    }
+    #send-btn {
+        padding: 15px 50px;
+    }
+    #history-container {
+        flex-wrap: wrap;
+        height: 300px;
+    }
+    .p-history {
+        width: 50%;
+        text-align: left;
+    }
+    #history-img {
+        margin: 0px;
+        width: 450px;
+        height: 255px;
+    }
+    table {
+        padding: 70px;
+    }
+}

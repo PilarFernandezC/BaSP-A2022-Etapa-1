@@ -1,0 +1,33 @@
+footer div {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#div-footer {
+    flex-direction: column;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+footer div img {
+    width: 4%;
+    margin: 5px;
+}
+
+@media screen and (min-width:834px) { 
+    #div-footer {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (min-width:1512px) { 
+    footer div {
+        padding: 30px;
+    }
+}
