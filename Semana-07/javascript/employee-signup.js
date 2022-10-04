@@ -396,6 +396,24 @@ window.onload = function () {
         localStorage.setItem('password', data.data.password);
     }
 
+    function changeDob1(date) {
+        var dateArray = date.split('/');
+        return dateArray[2] + '-' + dateArray[0] + '-' + dateArray[1];
+    }
+
+    function localGetItem() {
+        inputName.value = localStorage.getItem('name');
+        inputSurname.value = localStorage.getItem('lastName');
+        inputDni.value = localStorage.getItem('dni');
+        inputDateOfBirth.value = changeDob1(localStorage.getItem('dob'));        
+        inputTelephone.value = localStorage.getItem('phone');
+        inputAddress.value = localStorage.getItem('address');
+        inputCity.value = localStorage.getItem('city');
+        inputPostalCode.value = localStorage.getItem('zip');
+        inputEmail.value = localStorage.getItem('email');
+        inputPassword.value = localStorage.getItem('password');
+    }
+
     function fetchSignup () {
         fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value + '&lastName=' + 
         inputSurname.value + '&dni=' + inputDni.value + '&dob=' + changeDob(inputDateOfBirth.value) + '&phone=' + 
@@ -415,6 +433,10 @@ window.onload = function () {
         .catch(function (error) {
             alert('FAIL REQUEST \nSignup success: ' + error.success + '\nMessage: ' + error.msg);
         })
+    }
+
+    if (localStorage.length != 0) {
+        localGetItem();
     }
 
     submitButton.onclick = function(e) {
