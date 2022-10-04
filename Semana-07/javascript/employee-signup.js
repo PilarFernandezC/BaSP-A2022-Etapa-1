@@ -378,82 +378,98 @@ window.onload = function () {
         confirmPasswordError.remove();
     }
 
+    function changeDob(date) {
+        var dateArray = date.split('-');
+        return dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
+    }
+
+    function localSetItem(data) {
+        localStorage.setItem('name', data.data.name);
+        localStorage.setItem('lastName', data.data.lastName);
+        localStorage.setItem('dni', data.data.dni);
+        localStorage.setItem('dob', data.data.dob);
+        localStorage.setItem('phone', data.data.phone);
+        localStorage.setItem('address', data.data.address);
+        localStorage.setItem('city', data.data.city);
+        localStorage.setItem('zip', data.data.zip);
+        localStorage.setItem('email', data.data.email);
+        localStorage.setItem('password', data.data.password);
+    }
+
+    function fetchSignup () {
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value + '&lastName=' + 
+        inputSurname.value + '&dni=' + inputDni.value + '&dob=' + changeDob(inputDateOfBirth.value) + '&phone=' + 
+        inputTelephone.value + '&address=' + inputAddress.value + '&city=' + inputCity.value + '&zip=' + 
+        inputPostalCode.value + '&email=' + inputEmail.value + '&password=' + inputPassword.value)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            if (data.success) {
+                alert('SUCCESSFUL REQUEST \nSignup success: ' + data.success + '\nMessage: ' + data.msg);
+                localSetItem(data);
+            } else {
+                throw data;
+            }
+        })
+        .catch(function (error) {
+            alert('FAIL REQUEST \nSignup success: ' + error.success + '\nMessage: ' + error.msg);
+        })
+    }
+
     submitButton.onclick = function(e) {
         e.preventDefault();
 
         var errorMessage = [];
-        var confirmMessage = [];
 
         if (validateName ()) {
           errorMessage.push('name');
-        } else {
-            confirmMessage.push('Name: ' + inputName.value);
         }
 
         if (validateSurname()) {
             errorMessage.push('surname');
-        } else {
-            confirmMessage.push('Surname: ' + inputSurname.value);
         }
 
         if (validateDni()) {
             errorMessage.push('dni');
-        } else {
-            confirmMessage.push('DNI: ' + inputDni.value);
         }
 
         if (validateDateOfBirth()) {
             errorMessage.push('date of birth');
-        } else {
-            confirmMessage.push('Date of birth: ' + inputDateOfBirth.value)
         }
 
         if (validateTelephone()) {
             errorMessage.push('telephone');
-        } else {
-            confirmMessage.push('Telephone: ' + inputTelephone.value);
         }
 
         if (validateAddress()) {
             errorMessage.push('address');
-        } else {
-            confirmMessage.push('Address: ' + inputAddress.value);
         }
 
         if (validateCity()) {
             errorMessage.push('city');
-        } else {
-            confirmMessage.push('City: ' + inputCity.value);
         }
 
         if (validatePostalCode()) {
             errorMessage.push('postal code');
-        } else {
-            confirmMessage.push('Postal code: ' + inputPostalCode.value);
         }
 
         if (!validateEmail()) {
             errorMessage.push('email')
-        } else {
-            confirmMessage.push('Email: ' + inputEmail.value);
         }
 
         if (validatePassword()) {
             errorMessage.push('password');
-        } else {
-            confirmMessage.push('Password: ' + inputPassword.value);
         }
 
         if(validateConfirmPassword()) {
             errorMessage.push('confirm password');
-        } else {
-            confirmMessage.push('Confirm password: ' + inputConfirmPassword.value);
         }
 
         if (errorMessage.length !== 0) {
             alert('Input error:\n' + errorMessage.join('\n'));
         } else {
-            alert('The form was successfully completed with this information:\n' + confirmMessage.join('\n'));
+            fetchSignup();
         }
     }
 }
