@@ -107,29 +107,42 @@ window.onload = function () {
         passwordError.remove();
     }
 
+    function fetchLogin () {
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value 
+        + '&password=' + inputPassword.value)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            if (data.success) {
+                alert('SUCCESSFUL REQUEST \nLogin success: ' + data.success + '\nMessage: ' + data.msg);
+            } else {
+                throw data;
+            }
+        })
+        .catch(function (error) {
+            alert('FAIL REQUEST \nLogin success: ' + error.success + '\nMessage: ' + error.msg);
+        })
+    }
+
     submitButton.onclick = function(e) {
         e.preventDefault();
         var errorMessage = [];
-        var confirmMessage = [];
 
         if (!validateEmail()) {
             errorMessage.push('email')
             inputEmail.classList.add('red-border');
-        } else {
-            confirmMessage.push('Email: ' + inputEmail.value);
         }
 
         if (validatePassword()) {
             errorMessage.push('password');
             inputPassword.classList.add('red-border');
-        } else {
-            confirmMessage.push('Password: ' + inputPassword.value);
         }
 
         if (errorMessage.length !== 0) {
             alert('Input error:\n' + errorMessage.join('\n'));
         } else {
-            alert('The form was successfully completed with this information:\n' + confirmMessage.join('\n'));
+            fetchLogin();
         }
     }
 }
