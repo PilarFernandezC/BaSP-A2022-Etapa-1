@@ -117,7 +117,7 @@ window.onload = function () {
             if (data.success) {
                 alert('SUCCESSFUL REQUEST \nLogin success: ' + data.success + '\nMessage: ' + data.msg);
             } else {
-                throw data;
+                throw new Error (data);
             }
         })
         .catch(function (error) {

@@ -427,7 +427,7 @@ window.onload = function () {
                 alert('SUCCESSFUL REQUEST \nSignup success: ' + data.success + '\nMessage: ' + data.msg);
                 localSetItem(data);
             } else {
-                throw data;
+                throw new Error (data);
             }
         })
         .catch(function (error) {
